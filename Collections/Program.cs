@@ -5,4 +5,5 @@ using Collections;
 
 Console.WriteLine("Hello, World!");
 
-_ = BenchmarkRunner.Run<BenchmarkLists>();
+// _ = BenchmarkRunner.Run<BenchmarkLists>();
+_ = BenchmarkRunner.Run<BenchmarkAssocs>();
