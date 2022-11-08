@@ -3,25 +3,42 @@ using BenchmarkDotNet.Attributes;
 
 namespace Collections;
 
+[MemoryDiagnoser]
 public class BenchmarkLists
 {
-    private ArrayList _antiqueList = new();
-    private List<int> _genericList = new();
+    [Params(1_000, 10_000_000)]
+    public int Count { get; set;  }
+
+    [GlobalSetup]
+    public void GlobalSetup()
+    {
+        for (var i = 0; i < Count; i++)
+        {
+            var rnd = Random.Shared.Next(0, 1_000);
+            _antiqueListRead.Add(rnd);
+            _genericListRead.Add(rnd);
+        }
+    }
+
+    private readonly ArrayList _antiqueListRead = new();
+    private readonly List<int> _genericListRead = new();
     
     [Benchmark]
-    public void GenericListAdding()
+    public List<int> GenericListAdding()
     {
-        for (var i = 0; i < 10_000_000; i++)
+        var list = new List<int>();
+        for (var i = 0; i < Count; i++)
         {
-            _genericList.Add(Random.Shared.Next(0, 100));
+            list.Add(Random.Shared.Next(0, 1_000));
         }
+        return list;
     }
 
     [Benchmark]
     public int GenericListReading()
     {
         var temp = 0;
-        foreach (var i in _genericList) {
+        foreach (var i in _genericListRead) {
             var num = i;
             temp += num % 2 == 0 
                 ? num 
@@ -31,31 +48,26 @@ public class BenchmarkLists
     }
 
     [Benchmark]
-    public void AntiqueListAdding()
+    public ArrayList AntiqueListAdding()
     {
-        for (var i = 0; i < 10_000_000; i++)
+        var list = new ArrayList();
+        for (var i = 0; i < Count; i++)
         {
-            _antiqueList.Add(Random.Shared.Next(0, 100));
+            list.Add(Random.Shared.Next(0, 1_000));
         }
+        return list;
     }
 
     [Benchmark]
     public int AntiqueListReading()
     {
         var temp = 0;
-        foreach (var i in _antiqueList) {
+        foreach (var i in _antiqueListRead) {
             var num = (int)i;
             temp += num % 2 == 0 
                 ? num 
                 : num * -1;
         }
         return temp;
-    }
-
-    [IterationCleanup]
-    public void IterationCleanup()
-    {
-        _genericList = new List<int>();
-        _antiqueList = new ArrayList();
     }
 }
