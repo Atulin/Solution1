@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{F245FA25-F69F-4D21-B2D0-655A4DBDC8EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingNumbers", "ParsingNumbers\ParsingNumbers.csproj", "{422B2025-14E2-466B-818D-531BABDEA6B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{F245FA25-F69F-4D21-B2D0-655A4DBDC8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F245FA25-F69F-4D21-B2D0-655A4DBDC8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F245FA25-F69F-4D21-B2D0-655A4DBDC8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{422B2025-14E2-466B-818D-531BABDEA6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{422B2025-14E2-466B-818D-531BABDEA6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{422B2025-14E2-466B-818D-531BABDEA6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{422B2025-14E2-466B-818D-531BABDEA6B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
