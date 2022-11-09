@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingNumbers", "ParsingNumbers\ParsingNumbers.csproj", "{422B2025-14E2-466B-818D-531BABDEA6B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization", "Serialization\Serialization.csproj", "{43F1D996-2C7B-4C44-BEBD-4B8920027C8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{422B2025-14E2-466B-818D-531BABDEA6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422B2025-14E2-466B-818D-531BABDEA6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422B2025-14E2-466B-818D-531BABDEA6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F1D996-2C7B-4C44-BEBD-4B8920027C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F1D996-2C7B-4C44-BEBD-4B8920027C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F1D996-2C7B-4C44-BEBD-4B8920027C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F1D996-2C7B-4C44-BEBD-4B8920027C8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
