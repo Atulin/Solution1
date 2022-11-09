@@ -68,7 +68,7 @@ public class BenchmarkAssocs
         var temp = 0;
         for (var i = 0; i < _hashtable.Count; i++)
         {
-            var num = (int)_hashtable[i];
+            var num = (int)(_hashtable[i] ?? 0);
             temp += num % 2 == 0
                 ? num
                 : num * -1;
